@@ -2,101 +2,38 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-[#5f18eb66] to-[#5e17eb] relative overflow-hidden">
+      {/* Art Deco geometric background shapes */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-[#5f18eb66] opacity-30 rounded-br-[120px]" />
+        <div className="absolute bottom-0 right-0 w-1/3 h-1/3 bg-[#5e17eb] opacity-40 rounded-tl-[80px]" />
+        <div className="absolute top-1/2 left-1/2 w-40 h-40 bg-[#5e17eb] opacity-20 rounded-full -translate-x-1/2 -translate-y-1/2 border-8 border-[#5f18eb66]" />
+      </div>
+
+      <main className="relative z-10 flex flex-col items-center gap-8 p-8">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          src="/Tipdoor.png"
+          alt="Tipdoor Logo"
+          width={150}
+          height={150}
+          className="mb-6 rounded-full shadow-lg"
           priority
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div className="text-center bg-white/90 rounded-2xl shadow-xl px-8 py-6">
+          <span className="inline-block px-6 py-2 rounded-xl" style={{ background: 'rgba(95,24,235,1)' }}>
+            <h1 className="text-5xl font-extrabold tracking-widest text-white drop-shadow-lg mb-4 font-serif uppercase" style={{ letterSpacing: '0.15em', color: 'rgba(255,255,255,1)' }}>Tipdoor Delivery Partner</h1>
+          </span>
+          <p className="text-lg text-[#5e17eb] font-medium mb-6 max-w-xl mx-auto">
+            Welcome to your delivery dashboard. Navigate your assigned orders, and update statuses.
+          </p>
+        </div>
+        <div className="flex gap-6 flex-wrap justify-center">
+          <a href="/login" className="bg-[#5e17eb] hover:bg-[#5f18eb66] text-white font-bold py-3 px-8 rounded-[2em] shadow-lg text-xl tracking-widest transition-all font-serif uppercase">Login</a>
+          <a href="/deliveries" className="bg-[#5e17eb] hover:bg-[#5f18eb66] text-white font-bold py-3 px-8 rounded-[2em] shadow-lg text-xl tracking-widest transition-all font-serif uppercase">View Deliveries</a>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      <footer className="relative z-10 mt-16 text-center">
+        {/* Footer is now handled by the Footer component for consistency */}
       </footer>
     </div>
   );
